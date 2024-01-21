@@ -1,0 +1,91 @@
+alogaritma dari node
+1. Buat kelas Node dengan atribut data dan next.
+2. Inisialisasi objek Node dengan parameter data.
+
+alogaritma linked list
+1. Buat kelas LinkedList dengan atribut head.
+2. Inisialisasi objek LinkedList tanpa simpul awal.
+
+### Metode `append` pada LinkedList:
+1. Terima data sebagai parameter.
+2. Buat simpul baru (Node) dengan data tersebut.
+3. Jika head kosong:
+   - Set head menjadi simpul baru.
+4. Jika tidak:
+   - Iterasi sampai ujung linked list.
+   - Tambahkan simpul baru ke ujung.
+
+### Metode `print_list` pada LinkedList:
+1. Mulai dari head, iterasi melalui linked list.
+2. Cetak data dari setiap simpul.
+
+### Fungsi `enqueue`:
+1. Terima queue dan data sebagai parameter.
+2. Buat simpul baru (Node) dengan data tersebut.
+3. Jika queue kosong:
+   - Set head menjadi simpul baru.
+4. Jika tidak:
+   - Iterasi sampai ujung queue.
+   - Tambahkan simpul baru ke ujung.
+
+### Fungsi `dequeue`:
+1. Terima queue sebagai parameter.
+2. Jika queue kosong:
+   - Kembalikan None.
+3. Jika tidak:
+   - Ambil data dari head.
+   - Geser head ke simpul berikutnya.
+   - Kembalikan data.
+
+### Fungsi `to_array`:
+1. Terima string sebagai parameter.
+2. Inisialisasi array kosong.
+3. Iterasi melalui setiap karakter dalam string.
+4. Jika karakter adalah huruf kecil 'a' sampai 'z':
+   - Tambahkan nilai indeks (ord(c) - ord('a')) ke dalam array.
+5. Jika karakter adalah huruf besar 'A' sampai 'Z':
+   - Tambahkan nilai indeks (ord(c) - ord('A')) ke dalam array.
+6. Kembalikan array.
+
+### Fungsi `vigenere_cipher`:
+1. Terima teks_plaintext dan kunci sebagai parameter.
+2. Buat linked list dan queue baru.
+3. Konversi teks_plaintext dan kunci ke dalam array.
+4. Iterasi melalui array plaintext:
+   - Enqueue data ke dalam queue.
+   - Append data ke dalam linked list.
+5. Inisialisasi variabel j = 0.
+6. Selama queue tidak kosong:
+   - Dequeue data dari queue.
+   - Lakukan enkripsi Vigenere pada data.
+   - Cetak karakter hasil enkripsi.
+   - Jika j mencapai panjang kunci, set j = 0, jika tidak, tambahkan j.
+
+### Fungsi `vigenere_decipher`:
+1. Terima teks_ciphertext dan kunci sebagai parameter.
+2. Buat linked list dan queue baru.
+3. Konversi teks_ciphertext dan kunci ke dalam array.
+4. Iterasi melalui array ciphertext:
+   - Enqueue data ke dalam queue.
+   - Append data ke dalam linked list.
+5. Inisialisasi variabel j = 0.
+6. Selama queue tidak kosong:
+   - Dequeue data dari queue.
+   - Lakukan dekripsi Vigenere pada data.
+   - Cetak karakter hasil dekripsi.
+   - Jika j mencapai panjang kunci, set j = 0, jika tidak, tambahkan j.
+
+### Kode Utama:
+1. Tampilkan pesan penggunaan dan peraturan.
+2. Selama pengguna tidak memilih keluar:
+   - Tampilkan menu Vigenere Cipher.
+   - Terima pilihan pengguna.
+   - Jika pilihan adalah 1:
+      - Terima teks_plaintext dan kunci.
+      - Panggil fungsi vigenere_cipher.
+   - Jika pilihan adalah 2:
+      - Terima teks_ciphertext dan kunci.
+      - Panggil fungsi vigenere_decipher.
+   - Jika pilihan adalah 3, keluar dari loop.
+   - Jika pilihan tidak valid, tampilkan pesan kesalahan.
+   - Cetak hasil enkripsi atau dekripsi.

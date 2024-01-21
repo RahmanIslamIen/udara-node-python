@@ -1,0 +1,27 @@
+1. Cetak '=*90'
+2. Cetak 'Program Perhitungan Honor Guru Honorer'
+3. Masukkan banyak_guru
+4. Untuk setiap i sebanyak banyak_guru, lakukan langkah-langkah berikut:
+   a. Masukkan nama_guru
+   b. Masukkan jurusan
+   c. Masukkan jam_kerja
+   d. Inisialisasi pokok = 0
+   e. Inisialisasi bonus = 0
+   f. Jika jurusan == 'ipa', maka lakukan:
+      - pokok += 20.000
+      - Jika jam_kerja < 100, maka bonus += 0
+      - Jika jam_kerja >= 100 dan jam_kerja < 150, maka bonus += 3.500
+      - Jika jam_kerja >= 150, maka bonus += 5.500
+   g. Jika jurusan == 'ips', maka lakukan:
+      - pokok += 15.000
+      - Jika jam_kerja < 100, maka bonus += 0
+      - Jika jam_kerja >= 100 dan jam_kerja < 150, maka bonus += 3.500
+      - Jika jam_kerja >= 150, maka bonus += 5.500
+   h. Jika jurusan == 'smk', maka lakukan:
+      - pokok += 17.500
+      - Jika jam_kerja < 100, maka bonus += 0
+      - Jika jam_kerja >= 100 dan jam_kerja < 150, maka bonus += 3.500
+      - Jika jam_kerja >= 150, maka bonus += 5.500
+   i. total = (pokok + bonus) * jam_kerja
+   j. Cetak "Honor yang diterima oleh", nama_guru, "dalam sebulan sebanyak :", total
+   k. Cetak()
